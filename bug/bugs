@@ -1,0 +1,4 @@
+May or may not, I found a bug in the `std.regex`:
+link on Stack-Overflow
+http://stackoverflow.com/questions/44005463/fail-to-match-with-negative-look-ahead-assertion-when-tracking-down-on-a-delimit
+
