@@ -1,7 +1,7 @@
 
 
 # drr:
-### D-Language Rename and Remove Program Utility, based on Regular Expression
+### D-Language Rename and Remove Program Utility, based on [Regular Expression](https://en.wikipedia.org/wiki/Regular_expression)
 
 ---
 
