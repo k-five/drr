@@ -277,6 +277,7 @@ Usage:
     r = recursively
     s = substitute ( =renaming )
     d = delete     ( =removing )
+    ! = invert-match ( only-for-delete file )
 
     [2]:
     match = RegExp
@@ -332,6 +333,7 @@ rename:
 remove:
     '/[RegExp]/[b or f or d]'
     '/_+/b'
+    '!/_+/b'
 
     '/[RegExp]/[b or f or d]/[g or i or gi or ig]'
     '/_+/b/g'
@@ -350,6 +352,8 @@ writeln(
 Delimiter is free that meas it is up to you     |
 -------------------------------------------------
 0 for index-match does not allowed              |
+-------------------------------------------------
+invert-match only works with remove, not rename |
 -------------------------------------------------
 without 's' flag or 'd' flag at the beginning,  |
 program only prints and has no action. After you|
