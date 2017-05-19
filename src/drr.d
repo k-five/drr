@@ -7,7 +7,7 @@
 /*       License:                  Boost        */
 /************************************************/
 
-immutable char[ 5 ] __DRR_VERSION__ = "0.1.0";
+immutable char[ 5 ] __DRR_VERSION__ = "0.2.0";
 
 /****************************/
 /*     Standard Library     */
