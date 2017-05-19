@@ -22,7 +22,7 @@ import std.algorithm: 	copy, each, filter, map;
 import core.exception:  RangeError, AssertError;
 import std.string: 		split, empty, count, format, indexOf;
 import std.file:        FileException, rename, remove, rmdirRecurse, dirEntries, SpanMode, isDir, isFile;
-import std.regex:		regex, split, matchFirst, matchAll, replaceFirst, replaceAll, Regex, RegexException;
+import std.regex:		regex, split, matchFirst, matchAll, replaceFirst, replaceAll, Regex, RegexException, Captures;
 
 /******************************************/
 /*            custom color                */
@@ -89,7 +89,7 @@ int main( immutable string[] args ){
 		writeln( "Error: ", regex_error.msg );
 		return 0;
 	}
-	// Captures!(string, uint ) delimiter = rename_is_correct ?  matchFirst( args[ 1 ], regex( rename_pattern ) ) : matchFirst( args[ 1 ], regex( remove_pattern ) );
+	Captures!(string, uint ) delimiter = rename_is_correct ?  matchFirst( args[ 1 ], regex( rename_pattern ) ) : matchFirst( args[ 1 ], regex( remove_pattern ) );
 
 	/****************************************************/
 	/* find each part and initialize them appropriately */
