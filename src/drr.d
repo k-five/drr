@@ -148,7 +148,7 @@ int main( immutable string[] args ){
 		index = to!int( user_apply[ 5 ] );
 
 	immutable clone_index = index;
-	immutable bool action_flag_for_rename = ( action_flag == "s" || action_flag == "rs" || action_flag == "sr" ) && number_of_delimiter >= 3;
+	immutable bool action_flag_for_rename = ( action_flag.indexOf( "s" ) != -1 && number_of_delimiter >= 3 );
 	immutable bool action_flag_for_remove = ( action_flag == "d" || action_flag == "rd" || action_flag == "dr");
 	immutable bool end_flag_has_g = end_flag.indexOf( "g" ) != -1;
 
