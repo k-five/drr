@@ -159,7 +159,7 @@ int main( immutable string[] args ){
 	if( rename_is_correct || remove_is_correct ){
 		files_and_dirs =
 		dirEntries( ".", ( action_flag.indexOf( "r" ) != -1 ? SpanMode.depth : SpanMode.shallow ), false )
-			.filter!( file => !file.name.matchAll( regex( match, end_flag ) ).empty() )
+			.filter!( file => ( not ? !file.name.matchAll( regex( match, end_flag ) ).empty() : file.name.matchAll( regex( match, end_flag ) ).empty() ) )
 			.filter!( file => ( recursive == "b" ? !file.isSymlink : ( recursive == "f" ? !file.isDir : !file.isFile ) ) )
 			.map!( file => file.name )
 			.array;
