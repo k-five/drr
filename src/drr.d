@@ -13,16 +13,16 @@ immutable char[ 5 ] __DRR_VERSION__ = "0.2.0";
 /*     Standard Library     */
 /****************************/
 
-import std.array:		array;
+import std.array:	array;
 import std.process:     browse;
 import std.path:        baseName;
-import std.stdio:	    writeln, writef;
-import std.conv:		to, ConvException;
+import std.stdio:	writeln, writef;
+import std.conv:	to, ConvException;
 import std.algorithm: 	copy, each, filter, map;
 import core.exception:  RangeError, AssertError;
-import std.string: 		split, empty, count, format, indexOf;
+import std.string: 	split, empty, count, format, indexOf;
 import std.file:        FileException, rename, remove, rmdirRecurse, dirEntries, SpanMode, isDir, isFile;
-import std.regex:		regex, split, matchFirst, matchAll, replaceFirst, replaceAll, Regex, RegexException, Captures;
+import std.regex:	regex, split, matchFirst, matchAll, replaceFirst, replaceAll, Regex, RegexException, Captures;
 
 /******************************************/
 /*            custom color                */
@@ -132,10 +132,10 @@ int main( immutable string[] args ){
 
 	Regex!(char) user_regex;
 	string old_name;
-    string old_name_colorize;
-    string new_name;
-    string new_name_colorize;
-    string file_name;
+        string old_name_colorize;
+        string new_name;
+        string new_name_colorize;
+        string file_name;
 	try{
 		user_regex = regex( match, end_flag );
 	}
