@@ -80,7 +80,7 @@ int main( immutable string[] args ){
 	bool rename_is_correct;
 	bool remove_is_correct;
 	immutable string rename_pattern = `^(?:rs|sr|[rs]|)(.)(?:(?!\1).)+\1(?:(?!\1).)*\1(?:[fdb](?:\1(?:g|gi|ig)(?:\1-?[1-9]\d?|)|))$`;
-	immutable string remove_pattern = `^(?:rd|dr|[rd]|)(.)(?:(?!\1).)+\1(?:[fdb](?:\1(?:gi?|ig?)|))$`;
+	immutable string remove_pattern = `^(?:rd|dr|[rd]|)!?(.)(?:(?!\1).)+\1(?:[fdb](?:\1(?:gi?|ig?)|))$`;
 
 	try{
 		rename_is_correct = !matchFirst( args[ 1 ], regex( rename_pattern ) ).empty;
