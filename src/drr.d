@@ -101,16 +101,6 @@ int main( immutable string[] args ){
 	if( rename_is_correct || remove_is_correct ){
 		string arg = args[ 1 ];
 
-		immutable bool r = arg[ 0 ] == 'r';
-		immutable bool s = arg[ 0 ] == 's';
-		immutable bool d = arg[ 0 ] == 'd';
-
-		immutable bool rs = arg[ 0 ] == 'r' && arg[ 1 ] == 's';
-		immutable bool sr = arg[ 0 ] == 's' && arg[ 1 ] == 'r';
-
-		immutable bool rd = arg[ 0 ] == 'r' && arg[ 1 ] == 'd';
-		immutable bool dr = arg[ 0 ] == 'd' && arg[ 1 ] == 'r';
-
 		try{
 			if( rs || sr || dr || rd ){
 				split( arg, regex( to!string( arg[ 2 ] ) ) ).copy( user_apply );
