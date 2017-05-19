@@ -102,16 +102,8 @@ int main( immutable string[] args ){
 		string arg = args[ 1 ];
 
 		try{
-			if( rs || sr || dr || rd ){
-				split( arg, regex( to!string( arg[ 2 ] ) ) ).copy( user_apply );
-				number_of_delimiter = arg.count( arg[ 2 ] );
-			} else if( r || s || d ){
-				split( arg, regex( to!string( arg[ 1 ] ) ) ).copy( user_apply );
-				number_of_delimiter = arg.count( arg[ 1 ] );
-			} else {
-				split( arg, regex( to!string( arg[ 0 ] ) ) ).copy( user_apply );
-				number_of_delimiter = arg.count( arg[ 0 ] );
-			}
+			split( arg, regex( delimiter[ 1 ] ) ).copy( user_apply );
+			number_of_delimiter = arg.count( arg[ 2 ] );
 		} catch( AssertError ar ){
 			writeln( "Error: ", ar.msg );
 			return 0;
